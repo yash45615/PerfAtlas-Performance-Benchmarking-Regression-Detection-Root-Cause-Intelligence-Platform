@@ -1,0 +1,22 @@
+﻿project:
+  name: PerfAtlas
+  version: "0.1.0"
+
+benchmark:
+  warmup_iterations: 5
+  measured_iterations: 30
+  concurrency: 4
+  timeout_seconds: 10.0
+
+metrics:
+  percentiles: [50, 90, 95, 99]
+  regression_threshold_percent: 10.0
+  max_coefficient_of_variation: 0.10
+
+storage:
+  output_directory: runs
+  report_directory: reports
+
+logging:
+  level: INFO
+  json: false
